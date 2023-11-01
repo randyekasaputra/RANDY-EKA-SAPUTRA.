@@ -6,7 +6,7 @@ onclick = () => {
   navbarNav.classList.toggle("active");
 };
 
-// Klik di luar sidebar untuk menghilangkan nan
+// Klik di luar sidebar untuk menghilangkan nav
 const tugas = document.querySelector("#tugas-menu");
 
 document.addEventListener("click", function (e) {
