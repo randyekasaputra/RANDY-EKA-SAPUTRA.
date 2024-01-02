@@ -1,6 +1,6 @@
 :root {
-  --primary: #b6895b;
-  --bg: #010101;
+  --primary: #090606;
+  --bg: #ab3333;
 }
 
 * {
@@ -21,7 +21,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
-  min-height: 3000px;
+  min-height: 2000px;
 }
 
 /*navbar*/
@@ -30,7 +30,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 7%;
-  background-color: var(--bg);
+  background-color: #ab3333;
+  background-size: cover;
   border-bottom: 1px solid var(--primary);
   position: fixed;
   top: 0;
@@ -53,7 +54,7 @@ body {
 .navbar .navbar-nav a {
   color: #fff;
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin: 0 1rem;
 }
 
@@ -65,8 +66,7 @@ body {
   content: "";
   display: block;
   padding-bottom: 0.5rem;
-  border-bottom: 0.1rem solid var(--primary);
-  transform: scaleX(0);
+  border-bottom: 0.1rem solid var(--primary) transform scaleX(0);
   transition: 0.2s linear;
 }
 
@@ -92,7 +92,6 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../img/header-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -110,6 +109,7 @@ body {
     rgba(1, 1, 3, 1) rgba(255, 255, 255, 0) 25%
   );
 }
+
 
 .hero .content {
   padding: 1.4rem 7%;
@@ -149,22 +149,24 @@ body {
 
 /* About Section */
 .about,
-.menu .sosmed {
+.menu .tugas .sosmed {
   padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
 .menu h2,
+.tugas h2,
 .sosmed {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .about h2 span,
 .menu h2 span,
-.sosmed h2 span {
-  color: var(--primary);
+.tugas h2 span,
+.sosmed h2 span{
+  color: #000;
 }
 
 .about .row {
@@ -185,8 +187,8 @@ body {
 }
 
 .about .row .content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .about .row .content p {
@@ -199,13 +201,15 @@ body {
 
 /* Menu Section */
 .menu h2,
+.tugas h2
 .sosmed h2 {
   margin-bottom: 1rem;
 }
 .menu p,
+.tugas p,
 .sosmed p {
   text-align: center;
-  max-width: 30rem;
+  max-width: 20rem;
   margin: auto;
   font-weight: 50%;
   line-height: 2;
@@ -217,7 +221,7 @@ body {
   flex-wrap: wrap;
   margin-top: 1rem;
   justify-content: center;
-  color: #fff;
+  color: var(--primary);
 }
 
 .menu .row .menu-card {
@@ -225,13 +229,51 @@ body {
 }
 
 .menu .row .menu-card img {
-  border-radius: 30%;
-  width: 50%;
+  border-radius: 50%;
+  width: 70%;
 }
 
 .menu .row .menu-card .menu-card-title {
   margin: 1rem auto 1rem;
+  color: var(--primary);
+}
+/* Tugas Section */
+.menu h2,
+.tugas h2,
+.sosmed h2 {
+  margin-bottom: 1rem;
+}
+.menu p,
+.tugas h2,
+.sosmed p {
+  text-align: center;
+  max-width: 20rem;
+  margin: auto;
+  font-weight: 50%;
+  line-height: 2;
   color: #fff;
+}
+
+.tugas .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.tugas .row .tugas-card {
+  text-align: center;
+}
+
+.tugas .row .tugas-card img {
+  border-radius: 50%;
+  width: 70%;
+}
+
+.tugas .row .tugas-card .tugas-card-title {
+  margin: 1rem auto 1rem;
+  color: var(--primary);
 }
 
 /* Footer */
@@ -244,6 +286,7 @@ footer {
 
 footer .socials {
   padding: 1rem 0;
+  color: var(--primary);
 }
 
 footer .socials a {
@@ -275,7 +318,7 @@ footer.credit a {
 /* Tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 62.5%;
+    font-size: 62%;
   }
 
   #tugas-menu {
@@ -283,13 +326,14 @@ footer.credit a {
   }
 
   .navbar .navbar-nav {
+    display: none;
     position: absolute;
     top: 100%;
     right: -100%;
     background-color: #fff;
     width: 30rem;
     height: 100vh;
-    transition: 0.3s;
+    transition: 0.5s;
   }
 
   .navbar .navbar-nav.active {
